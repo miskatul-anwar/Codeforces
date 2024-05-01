@@ -20,15 +20,14 @@ int main() {
     for (ll i = 0; i < n; i++) {
       cin >> v2[i];
     }
-    ll i = 0, j = 0, count = 0;
-    while (i != n) {
-      if (v1[i] > v2[j]) {
-        n--;
-        j++;
+    ll j = 0, count = 0;
+    for (ll i = 0; i < n; i++) {
+      if (v1[i] > v2[j++]) {
         count++;
-      } else {
-        i++;
-        j++;
+        i--;
+      }
+      if (j > n - 1) {
+        break;
       }
     }
     cout << count << endl;
