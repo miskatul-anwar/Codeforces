@@ -5,4 +5,3 @@ fun main() {
         println("${minOf(x, y)} ${maxOf(x, y)}")
     }
 }
-
